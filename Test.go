@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-func main() {
-	var name string
-	var age int
-	var cgpa float32
-	var status bool
+func change(x *int) {
+	*x = 200
+}
 
-	fmt.Scanf("%s", &name)
-	fmt.Scanf("%d", &age)
-	fmt.Scanf("%g", &cgpa)
-	fmt.Scanf("%t", &status)
+func main() {
+	a := 10
+	change(&a)
+
+	fmt.Println(a)
 }
